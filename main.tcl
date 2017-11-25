@@ -1,6 +1,4 @@
-#Updated by reed 18 Jun 2017
-#Updated by curvian for current FG apt.dat spec on 24 Nov 2017, added geodistance (geo.tcl)
-#Updated by curvian on 25 Nov 2017, add dist command and different command triggers for public/notice
+# adapted from metarbot 0.7 by reeed
 
 
 ####  SETTINGS  ####
