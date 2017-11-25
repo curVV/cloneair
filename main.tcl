@@ -1,11 +1,12 @@
 #Updated by reed 18 Jun 2017
 #Updated by curvian for current FG apt.dat spec on 24 Nov 2017, added geodistance (geo.tcl)
+#Updated by curvian on 25 Nov 2017, add dist command and different command triggers for public/notice
 
 
 ####  SETTINGS  ####
 
 # specify path to $FG_ROOT
-set fgdata "/home/curvian/FlightGear/fgdata"
+set fgdata "/usr/share/flightgear"
 
 # set maximum number of search results
 set max_results 20
@@ -16,6 +17,7 @@ set max_results 20
 bind pub - !help pub_help
 bind msg - !help msg_help
 bind msg -  help msg_help
+
 bind pub - !wx pub_wx
 bind msg - !wx msg_wx
 bind msg -  wx msg_wx
