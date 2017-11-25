@@ -36,7 +36,7 @@ proc help {chan} {
     putquick "notice $chan :!aptinfo string List airports matching string (>4 characters), or"
     putquick "notice $chan :!aptinfo icao   Display airport info (ICAO code)"
     putquick "notice $chan :!mp         List pilots on FlightGear multiplayer servers"
-    putquick "notice $chan :!distance icao icao        Calculate distance between airports"
+    putquick "notice $chan :!dist icao icao        Calculate distance between airports"
 }
 
 proc msg_help {nick host hand arg} {
