@@ -195,8 +195,8 @@ proc distance {icao_a icao_b} {
 
     global fgdata
 
-    if {[catch {set icao_a_text [exec zgrep -A 1 -i "^1 .* ${icao_a} " $fgdata/Airports/apt.dat.gz]} err]} {return "Not found: $icao_a"}
-    if {[catch {set icao_b_text [exec zgrep -A 1 -i "^1 .* ${icao_b} " $fgdata/Airports/apt.dat.gz]} err]} {return "Not found: $icao_b"}
+    if {[catch {set icao_a_text [exec zgrep -P -A 1 -i "^1\\s+.*\\s+${icao_a}\\s+" $fgdata/Airports/apt.dat.gz]} err]} {return "Not found: $icao_a"}
+    if {[catch {set icao_b_text [exec zgrep -P -A 1 -i "^1\\s+.*\\s+${icao_b}\\s+" $fgdata/Airports/apt.dat.gz]} err]} {return "Not found: $icao_b"}
 
     set icao_a_runway_data [regexp -all -inline -- {\S+} [lindex [split $icao_a_text "\n"] 1]]
     set icao_b_runway_data [regexp -all -inline -- {\S+} [lindex [split $icao_b_text "\n"] 1]]
